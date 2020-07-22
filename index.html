@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cube Padding for Weakly-Supervised Saliency Prediction in 360° Videos</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/carousel.css">
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <meta name="description" content="Project Website">
+
+</head>
+<body class="nd-docs">
+
+<div class="nd-pageheader">
+  <div class="container">
+    <h1>Self-similarity Student for Partial Label <br> Histopathology Image Segmentation</h1>
+    <address>
+      <a href="">Hsien-Tzu Cheng<sup>1</sup></a>,&nbsp;
+      <a href="">Chun-Fu Yeh<sup>1</sup></a>,&nbsp;
+      <a href="">Po-Chen Kuo<sup>1,3</sup></a>,&nbsp;
+      <a href="">Andy Wei<sup>1</sup></a>,&nbsp;
+      <a href="">Keng-Chi Liu<sup>1</sup></a>,&nbsp;
+      <a href="">Mong-Chi Ko<sup>1</sup></a>,&nbsp; <br>
+      <a href="">Kuan-Hua Chao<sup>1</sup></a>,&nbsp;
+      <a href="">Yu-Ching Peng<sup>2</sup></a>,&nbsp;
+      <a href="">Tyng-Luh Liu<sup>1,4</sup></a>
+      <br><br>
+      <nobr>Taiwan AI Labs<sup>1</sup></nobr>,&nbsp;
+      <nobr>Taipei Veterans General Hospital<sup>2</sup></nobr>,&nbsp; <br>
+      <nobr>National Taiwan University College of Medicine<sup>3</sup></nobr>,&nbsp; <br>
+      <nobr>Institute of Information Science, Academia Sinica, Taiwan<sup>4</sup></nobr>
+    </address>
+  </div>
+  <a href="https://arxiv.org/abs/2007.09610" target="_blank"><img src="img/pdf.png"> [Paper (arXiv)] </a>
+  <p></p>
+</div><!-- end nd-pageheader -->
+
+<div class="container">
+
+  <div class="row">
+  <div class="col">
+    <figure>
+      <img src="img/fig_overview_v15-min.png" style="width:640px;">
+    </figure>
+  <h2>Abstract</h2>
+  <p>Delineation of cancerous regions in gigapixel whole slide images (WSIs) is a crucial diagnostic procedure in digital pathology. This process is time-consuming because of the large search space in the gigapixel WSIs, causing chances of omission and misinterpretation at indistinct tumor lesions. To tackle this, the development of an automated cancerous region segmentation method is imperative. We frame this issue as a modeling problem with partial label WSIs, where some cancerous regions may be misclassified as benign and vice versa, producing patches with noisy labels. To learn from these patches, we propose Self-similarity Student, combining teacher-student model paradigm with similarity learning. Specifically, for each patch, we first sample its similar and dissimilar patches according to spatial distance. A teacher-student model is then introduced, featuring the exponential moving average on both student model weights and teacher predictions ensemble. While our student model takes patches, teacher model takes all their corresponding similar and dissimilar patches for learning robust representation against noisy label patches. Following this similarity learning, our similarity ensemble merges similar patches’ ensembled predictions as the pseudo-label of a given patch to counteract its noisy label. On the CAMELYON16 dataset, our method substantially outperforms state-of-the-art noise-aware learning methods by 5% and the supervised-trained baseline by 10% in various degrees of noise. Moreover, our method is superior to the baseline on our TVGH TURP dataset with 2% improvement, demonstrating the generalizability to more clinical histopathology segmentation tasks.</p>
+
+  <hr>
+  <!--figure>
+    <img src="img/preview.jpg">
+  </figure-->
+  
+  <p></p>
+  <!--a href="" target="_blank"><img src="img/github_icon.png"> [Source Code] </a><p></p-->
+  <!--hr-->
+
+
+  </div>
+  </div> <!-- row -->
+
+  <div class="row">
+    <div class="col">
+      <h2>Our Method</h2>
+      <figure>
+        <img src="img/fig_model_overview_v12-min.png" style="width:640px;">
+        <figcaption>
+        </figcaption>
+      </figure>
+    </div>
+  </div> <!-- row -->
+
+
+  <div class="row">
+    <div class="col">
+      <h2>Result</h2>
+      <p>TBD</p>
+    </div>
+  </div> <!-- row -->
+
+  <div class="row">
+    <div class="col">
+      <h2>Acknowledgement</h2>
+      <p>TBD</p>
+    </div>
+  </div> <!-- row -->
+
+  <br>
+  <br>
+  <br>
+
+</div> <!-- container -->
+
+
+<script>
+$('img:not([data-nothumb])[src]').wrap(function() {
+  var result = $('<a data-toggle="lightbox">')
+  result.attr('href', $(this).attr('src'));
+  var caption = $(this).closest('figure').find('figcaption').text();
+  if (!caption && $(this).closest('.citation').length) {
+    caption = $(this).closest('.citation').text();
+  }
+  if (caption) {
+    result.attr('data-footer', caption);
+  }
+  var title = $(this).attr('title');
+  if (!title) {
+    title = $(this).closest('td').find('.unit,.score').map(function() {
+      return $(this).text(); }).toArray().join('; ');
+  }
+  if (title) {
+    result.attr('data-title', title);
+  }
+  return result;
+});
+$(document).on('click', '[data-toggle=lightbox]', function(event) {
+    $('#lightbox .img-wrapper').toggleClass('img-scroller',
+       !!$(this).find('img').data('scroller'));
+    $('#lightbox img').attr('src', $(this).attr('href'));
+    $('#lightbox .modal-title').text($(this).data('title') || '');
+    $('#lightbox .modal-footer').text($(this).data('footer') || '');
+    event.preventDefault();
+    $('#lightbox').modal();
+    $('#lightbox img').closest('div').scrollLeft(0);
+});
+$(document).on('keydown', function(event) {
+    $('#lightbox').modal('hide');
+});
+$('video').click(function(){this.paused?this.play():this.pause();});
+</script>
+
+
+</body>
+</html>

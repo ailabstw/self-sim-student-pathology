@@ -6,10 +6,8 @@
   <title>Self-similarity Student for Partial Label Histopathology Image Segmentation</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/carousel.css">
   <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
   <meta name="description" content="Project Website">
-
 </head>
 <body class="nd-docs">
 
@@ -34,7 +32,8 @@
       <nobr>(* Both authors contributed equally to this work.)</nobr>&nbsp;
     </address>
   </div>
-  <a href="https://arxiv.org/abs/2007.09610" target="_blank"><img src="img/pdf.png"> [Paper (arXiv)] </a>
+  <a href="https://arxiv.org/abs/2007.09610" target="_blank"><img src="img/pdf.png" style="width:40px;height:40px;"> [Paper (arXiv)] </a>
+  <a href="https://www.youtube.com/embed/cyqpIton2Oo" target="_blank"><img src="img/youtube.png" style="width:40px;height:40px;"> [Video] </a>
   <p></p>
 </div><!-- end nd-pageheader -->
 
@@ -63,6 +62,16 @@
 
   <div class="row">
     <div class="col">
+      <h2>Method Overview</h2>
+    </div>
+  </div> <!-- row -->
+
+  <div class="row">
+    <iframe class='center' width="640" height="360" src="https://www.youtube.com/embed/cyqpIton2Oo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div> <!-- row -->
+
+  <!--div class="row">
+    <div class="col">
       <h2>Our Method</h2>
       <figure>
         <img src="img/fig_model_overview_v12-min.png" style="width:640px;">
@@ -70,66 +79,110 @@
         </figcaption>
       </figure>
     </div>
-  </div> <!-- row -->
-
-
+  </div--> <!-- row -->
+  <br>
+  <br>
+  
   <div class="row">
     <div class="col">
       <h2>Result</h2>
-      <p>TBD</p>
     </div>
-  </div> <!-- row -->
+  </div>
 
   <div class="row">
     <div class="col">
+      <p style="text-align:center;">CAMELYON16 Result (trained from Top-1 setting with 42.4% wrong label)</p>
+      <div class='center' style="position:relative;max-width:720px;min-width:60px;height:480px;">
+        <iframe style="top: 0; left: 0; width: 100%; height: 100%;" src="https://flickrembed.com/cms_embed.php?source=flickr&layout=responsive&input=https%3A%2F%2Fwww.flickr.com%2Fphotos%2F189589104%40N02%2Falbums%2F72157715372938547&sort=0&by=album&theme=default_notextpanel&scale=fill&speed=3000&limit=10&skin=default&autoplay=false" scrolling="no" frameborder="0" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+        <script type="text/javascript">function showpics(){var a=$("#box").val();$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags="+a+"&tagmode=any&format=json&jsoncallback=?",function(a){$("#images").hide().html(a).fadeIn("fast"),$.each(a.items,function(a,e){$("<img/>").attr("src",e.media.m).appendTo("#images")})})}</script>
+        <div style="position: absolute;width: 80%;bottom:17px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;">
+          <!--small style="line-height:1.8;font-size:2px;background:transparent;">Powered by 
+          <a href="https://flickrembedslideshow.com/fr/">Flickrembedslideshow.com/fr/</a> & <a href=""></a>
+          </small-->
+        </div>
+      </div>    
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col">
+      <p style="text-align:center;">TVGH TURP Result (trained from all label)</p>
+      <div class='center' style="position:relative;max-width:720px;min-width:100px;height:480px;">
+        <iframe style="top: 0; left: 0; width: 100%; height: 100%;" src="https://flickrembed.com/cms_embed.php?source=flickr&layout=responsive&input=https%3A%2F%2Fwww.flickr.com%2Fphotos%2F189589104%40N02%2Falbums%2F72157715373392812&sort=0&by=album&theme=default_notextpanel&scale=fill&speed=3000&limit=10&skin=default&autoplay=false" scrolling="no" frameborder="0" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+        <script type="text/javascript">function showpics(){var a=$("#box").val();$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags="+a+"&tagmode=any&format=json&jsoncallback=?",function(a){$("#images").hide().html(a).fadeIn("fast"),$.each(a.items,function(a,e){$("<img/>").attr("src",e.media.m).appendTo("#images")})})}</script>
+        <div style="position: absolute;width: 80%;bottom:17px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;">
+          <!--small style="line-height:1.8;font-size:2px;background:transparent;">Powered by 
+            <a href="https://flickrembedslideshow.com/de/">Flickrembedslideshow.com/de/</a> & <a href=""></a>
+          </small-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--div class="row">
+    <div class="col">
+      <div class="img-zoom-container">
+        <img id="myimage" src="img/S108-76745J-prob.jpg" width="500" height="300" alt="WSI">
+      </div>
+    </div>
+    <div class="col">
+      <div id="myresult" class="img-zoom-result"></div>
+    </div>
+  </div-->  <!-- row -->
+
+</div> 
+
+<div class="container" id="paper">
+  <div class="row">
+    <div class="col">
+      <h2>Citation</h2>
+      <pre>@InProceedings{Cheng_2020_ECCV,
+author    = {Cheng, Hsien-Tzu and Yeh, Chun-Fu and Kuo, Po-Chen and Wei, Andy and Liu, Keng-Chi and Ko, Mong-Chi and Chao, Kuan-Hua and Peng, Yu-Ching and Liu, Tyng-Luh},
+title     = {Self-similarity Student for Partial Label Histopathology Image Segmentation},
+booktitle = {Proceedings of the European Conference on Computer Vision (ECCV)},
+year      = {2020}
+}</pre>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
       <h2>Acknowledgement</h2>
-      <p>TBD</p>
+        We appreciate Yi-Chin Tu, the chairman of Taiwan AI Labs, for the generous support of this project. <br>
+        We appreciate the intensive assistance made by the Department of Pathology and Laboratory Medicine, Taipei Veterans General Hospital. <br>
+        We appreciate Tsun-Hsiao Wang at National Yang-Ming University for his contribution on cancer delineation in WSIs of TVGH TURP dataset.
     </div>
   </div> <!-- row -->
 
-  <br>
-  <br>
-  <br>
-
 </div> <!-- container -->
+  
+<br>
 
 
-<script>
-$('img:not([data-nothumb])[src]').wrap(function() {
-  var result = $('<a data-toggle="lightbox">')
-  result.attr('href', $(this).attr('src'));
-  var caption = $(this).closest('figure').find('figcaption').text();
-  if (!caption && $(this).closest('.citation').length) {
-    caption = $(this).closest('.citation').text();
-  }
-  if (caption) {
-    result.attr('data-footer', caption);
-  }
-  var title = $(this).attr('title');
-  if (!title) {
-    title = $(this).closest('td').find('.unit,.score').map(function() {
-      return $(this).text(); }).toArray().join('; ');
-  }
-  if (title) {
-    result.attr('data-title', title);
-  }
-  return result;
-});
-$(document).on('click', '[data-toggle=lightbox]', function(event) {
-    $('#lightbox .img-wrapper').toggleClass('img-scroller',
-       !!$(this).find('img').data('scroller'));
-    $('#lightbox img').attr('src', $(this).attr('href'));
-    $('#lightbox .modal-title').text($(this).data('title') || '');
-    $('#lightbox .modal-footer').text($(this).data('footer') || '');
-    event.preventDefault();
-    $('#lightbox').modal();
-    $('#lightbox img').closest('div').scrollLeft(0);
-});
-$(document).on('keydown', function(event) {
-    $('#lightbox').modal('hide');
-});
-$('video').click(function(){this.paused?this.play():this.pause();});
-</script>
+<div class="container">
+  <div class="row">    
+    <div class="col">  
+          <p style="text-align:center;">
+          <a href="" target="_blank"><img src="img/ailabs_logo.png" height="60"></a>
+          &emsp;
+          <a href="" target="_blank"><img src="img/tvgh_logo_big.png" height="90"></a>
+          &emsp;
+          </p>
+      </div>
+    </div>   
+  </div>
+</div>
+
+<div class="footer">
+  <p>© 2020 Copyright Taiwan AI Labs. All Rights Reserved. </p>
+</div>
+
+<!--script src='js/main.js'></script-->
+<!--script>
+  imageZoom("myimage", "myresult");
+</script-->
 
 
 </body>

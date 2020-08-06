@@ -9,6 +9,15 @@ body, td, th {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* Footer */
+.footer {
+  font-size: 15px;
+  padding: 20px;
+  text-align: center;
+  color: #e4f1fe;
+  background: #1C1C32;
+}
+
 h2 {
   margin-top: 3ex;
 }
@@ -33,6 +42,7 @@ h2 {
 .nd-pageheader .container {
   position: relative
 }
+
 
 .nd-pageheader .container h1{
   font-size: 2.1rem;
@@ -63,6 +73,7 @@ h2 {
   padding-left: 5%;
   padding-right: 5%;
 }
+
 
 .citation {
   margin-top: 15px;
@@ -253,4 +264,29 @@ video::-webkit-media-controls-panel {
 }
 video[controls] {
   margin-bottom: 30px;
+}
+
+.center { margin: 0 auto;}
+
+
+* {box-sizing: border-box;}
+
+.img-zoom-container {
+  position: relative;
+  text-align: center;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 30px;
+  height: 30px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 300px;
+  height: 300px;
 }
